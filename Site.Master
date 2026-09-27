@@ -1,0 +1,115 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="EmployeeManagementSystem.Site" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Employee Management System</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f5f5;
+            color: #222222;
+        }
+        /* ================= HEADER ================= */
+        .header {
+            background-color: #111111;
+            color: white;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        /* ================= NAVIGATION ================= */
+        .nav {
+            display: flex;
+            gap: 10px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .nav a:hover {
+            background-color: #2b2b2b;
+        }
+        /* ================= MAIN CONTENT ================= */
+        .main-content {
+            min-height: 500px;
+            padding: 30px 40px;
+        }
+        /* ================= FOOTER ================= */
+        .footer {
+            background-color: #111111;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        .footer p {
+            margin: 0;
+        }
+        /* ================= PAGE TITLE ================= */
+        .page-title {
+            color: #111111;
+            margin-bottom: 20px;
+        }
+        /* ================= BUTTON ================= */
+        .btn {
+            display: inline-block;
+            background-color: #111111;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #2b2b2b;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- ================= HEADER ================= -->
+        <header class="header">
+            <div class="logo">
+                Employee Management System
+            </div>
+            <nav class="nav">
+                <a href="Home.aspx">Home</a>
+                <a href="Employees.aspx">Employees</a>
+                <a href="Departments.aspx">Departments</a>
+                <a href="About.aspx">About</a>
+                <a href="Contact.aspx">Contact</a>
+                <a href="Logout.aspx">Logout</a>
+            </nav>
+        </header>
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </main>
+        <!-- ================= FOOTER ================= -->
+        <footer class="footer">
+            <p>
+                © 2026 Employee Management System | ASP.NET Web Forms
+            </p>
+        </footer>
+    </form>
+</body>
+</html>
